@@ -10,7 +10,7 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_core.messages.ai import AIMessage
 groq_llm = ChatGroq(model="llama-3.3-70b-versatile")
 search_tool = TavilySearchResults(max_result=2)
-system_prompt = "act as a finance agent and give me a detailed financial report in proper format based on the message provided"
+system_prompt = "act as a web search agent and answer the question asked by searching the web and give the answer in a detailed report format"
 from langgraph.prebuilt import create_react_agent
 agent=create_react_agent(
     model=groq_llm,
